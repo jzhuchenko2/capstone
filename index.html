@@ -11,3 +11,140 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gif.js/dist/gif.js"></script>
     <style>
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 80%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+
+/* Twitter */
+.fa-linkedin {
+  background: #55ACEE;
+  color: white;
+}
+      
+      /* CSS code for the orbit path and circle */
+      #orbit-path {
+        position: absolute;
+        width: 40vw; /* Adjust the width of the orbit path as needed */
+        height: 40vw; /* Adjust the height of the orbit path as needed */
+        border: 3px dashed rgba(255, 255, 255, 0.5); /* Dashed red border */
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none; /* Ensure the path doesn't interfere with mouse events */
+        z-index: -1; /* Position the orbit path behind the circle */
+      }
+  
+      #black-circle {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #a51523;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        animation: followTrajectory 10s linear infinite; /* Apply follow trajectory animation */
+      }
+  
+      @keyframes followTrajectory {
+        from {
+          transform: translate(-30%, -30%) rotate(0deg) translateX(calc(40vw - 10px)) rotate(0deg);
+        }
+        to {
+          transform: translate(-20%, -10%) rotate(360deg) translateX(calc(10vw - 70px)) rotate(-360deg);
+        }
+      }
+
+      /*second satellite (ig like a black hole)
+       
+      we don't need this..... this is for the satellite evolving out of black hole (EXTRATERRESTIAL?)
+      #black-circlea {
+        position: absolute;
+        width: 30px;
+        height: 50px;
+        background-color: #5bdf1a;
+        border-radius: 50%;
+        transform: translate(20%, 10%);
+        top: 50%;
+        right: 50%;
+        animation: followTrajectorya 10s linear infinite; /* Apply follow trajectory animation 
+      }
+      @keyframes followTrajectorya {
+        from {
+          transform: translate(-30%, 30%) rotate(0deg) translateX(calc(10vw - 50px)) rotate(0deg);
+        }
+        to {
+          transform: translate(20%, 10%) rotate(360deg) translateX(calc(40vw - 50px)) rotate(-360deg);
+        }
+      }*/
+
+
+
+
+
+
+
+      #black-circleb {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #a51523;
+    border-radius: 50%;
+    transform: translate(50%, 50%);
+    top: 50%;
+    right: 50%;
+    animation: followTrajectoryb 10s linear infinite; /* Apply follow trajectory animation */
+}
+
+#black-circleb.opposite {
+    right: auto;
+    left: 90%; /* Position on the opposite side of the screen */
+    animation-delay: 2s; /* Delay the animation to create the opposite effect */
+}
+
+@keyframes followTrajectoryb {
+    from {
+        transform: translate(30%, 30%) rotate(0deg) translateX(calc(-40vw - -10px)) rotate(0deg);
+    }
+    to {
+        transform: translate(20%, 10%) rotate(360deg) translateX(calc(-10vw - -70px)) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+
+      #radio-buttons {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        line-height: 28px;
+      }
+      #radio-buttons input[type="radio"] {
+  transform: scale(2); /* Make the radio buttons bigger */
+  margin-right: 10px; /* Add some spacing between radio buttons */
+  
+
+
+}
+
+    </style>
