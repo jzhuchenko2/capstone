@@ -1,1 +1,618 @@
+/* Your existing CSS */
 
+/* Navigation bar styles */
+nav {
+  background-color: rgb(51, 51, 51);
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  z-index: 1000;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  align-items: center;
+  text-transform: uppercase;
+  line-height: 18px;
+  border-radius: 40px;
+  box-shadow: 0 0 120px rgba(255, 120, 3, 0.2); /* Soft shadow effect */
+  transition: background-color 0.3s;
+  justify-content: space-between;
+}
+
+nav button:hover {
+  background-color: #777; /* Button background color on hover */
+}
+
+ul {
+  margin: 0;
+  padding: 10;
+  text-align: center;
+  margin-right: 250px;
+}
+.logo {
+  color: rgb(189, 189, 189);
+  font-weight:bolder;
+  margin-left:50px;
+  display: flex;
+  margin-top: 1px;
+  scroll-margin-left: 10px;
+  font-size: 50px;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+  
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+a:hover {
+  color: #ccc;
+}
+.name {
+  color: rgb(189, 189, 189);
+  font-size: 20px;
+  text-decoration: none;
+  order: 3;
+  margin-right:50px;
+}
+
+
+
+/*.sidebar {
+  z-index: 900;
+  position: absolute;
+    top: 30%; 
+    bottom: 20%; 
+    left: 0;
+    width: 145px; 
+    background-color: #333; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 30%;
+    box-shadow: 0 0 120px rgba(255, 120, 3, 0.2);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.sidebar button {
+  margin-bottom: 20px; 
+  padding: 20px; 
+  width: 115px; 
+  background-color: #555; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.sidebar button:hover {
+  background-color: #777; 
+}*/
+
+
+.sidebar {
+  z-index: 900;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 145px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  box-shadow: 0 0 120px rgba(255, 120, 3, 0.2);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.sidebar button {
+  margin-bottom: 20px;
+  padding: 25px;
+  width: 115px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.sidebar button:hover {
+  background-color: #777;
+}
+
+.speed-control {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.speed-value {
+  color: #fff;
+  margin-top: 5px;
+}
+
+label {
+  color: #fff;
+  margin-top: 10px;
+}
+
+#c.pressed {
+  background-color: #ff0000; /* Change to your desired color */
+  /* Additional styles for the button when pressed */
+}
+#b.pressed {
+  background-color: #ff0000; /* Change to your desired color */
+  /* Additional styles for the button when pressed */
+}
+#a.pressed {
+  background-color: #ff0000; /* Change to your desired color */
+  /* Additional styles for the button when pressed */
+}
+
+
+/* Tooltip style */
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 5px); /* Adjust the distance from the button */
+  transform: translateY(-50%);
+  padding: 12px; /* Adjust the padding */
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
+  color: #fff;
+  font-size: 14px; /* Adjust the font size */
+  border-radius: 8px; /* Adjust the border radius */
+  white-space: pre-wrap;
+  word-wrap: break-word; /* Allow text to wrap onto new line */
+  width: 200px; /* Adjust the maximum width before wrapping */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+
+/* Bottom text styles */
+footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #aaa;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  margin-left:110px;
+}
+
+#center-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*#satellite {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(234, 255, 0);
+  border-radius: 50%;
+  top: calc(50% - 60px); /* 60px is the radius of the center circle plus 10px 
+  left: 30%;
+  transform-origin: center;
+  animation: orbit 10s linear infinite; /* Apply orbit animation 
+} old satellite that goes with the orbit-pathb
+*/
+
+
+/* these two black holes are mimicing the lagrange points. USE THEMMMMMMMMMM!!!!!!
+#HoleOrbit {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  top: calc(50% - 90px); /* 60px is the radius of the center circle plus 10px 
+  left: 30%;
+  transform-origin: center;
+  animation: orbit 10s linear infinite; /* Apply orbit animation 
+
+} another satellite that goes well with the orbit-pathb*/
+
+
+
+
+
+
+
+/*#HoleOrbitb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  top: calc(47%); /* 60px is the radius of the center circle plus 10px 
+  left: 48%;
+  transform-origin: center;
+  animation: orbitb 7s linear infinite; /* Apply orbit animation 
+}*/
+
+#actualBHO {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(28, 28, 29);
+  border-radius: 50%;
+  top: calc(45%); /* 60px is the radius of the center circle plus 10px */
+  left: 48%;
+  transform-origin: center;
+  animation: orbita 7s linear infinite; /* Apply orbit animation */
+  box-shadow: 1vmin 0 2vmin 1vmin #f50,
+         inset -1vmin 0 1vmin 5vmin rgb(13, 12, 11),
+               -2vmin 0 2vmin 0 #f60;
+}
+#L4 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(4, 4, 176);
+  border-radius: 50%;
+  top: calc(45%); /* 60px is the radius of the center circle plus 10px */
+  left: 48%;
+  transform-origin: center;
+  animation: orbite 7s linear infinite; /* Apply orbit animation */
+}
+#L5 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(4, 4, 176);
+  border-radius: 50%;
+  top: calc(45%); /* 60px is the radius of the center circle plus 10px */
+  left: 48%;
+  transform-origin: center;
+  animation: orbitd 7s linear infinite; /* Apply orbit animation */
+}
+#L2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(29, 242, 192);
+  border-radius: 50%;
+  top: calc(47%); /* 60px is the radius of the center circle plus 10px */
+  left: 48%;
+  transform-origin: center;
+  animation: orbitb 7s linear infinite; /* Apply orbit animation */
+}
+#L1 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(29, 242, 192);
+  border-radius: 50%;
+  top: calc(47%); /* 60px is the radius of the center circle plus 10px */
+  left: 48%;
+  transform-origin: center;
+  animation: orbitc 7s linear infinite; /* Apply orbit animation */
+}
+#L3 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(29, 242, 192);
+  border-radius: 50%;
+  top: calc(45%); /* 60px is the radius of the center circle plus 10px */
+  left: 48%;
+  transform-origin: center;
+  animation: orbitf 7s linear infinite; /* Apply orbit animation */
+}
+
+@keyframes orbita {
+  0% {
+    transform: translate(70%, 90%) rotate(0deg) translate(500px) rotate(0deg);
+  }
+  100% {
+    transform: translate(70%, 90%) rotate(360deg) translate(505px) rotate(-360deg);
+  }
+}
+@keyframes orbitb {
+  0% {
+    transform: translate(70%, 90%) rotate(0deg) translate(600px) rotate(0deg);
+  }
+  100% {
+    transform: translate(100%, 90%) rotate(360deg) translate(600px) rotate(-360deg);
+  }
+}
+@keyframes orbitc {
+  0% {
+    transform: translate(70%, 90%) rotate(0deg) translate(400px) rotate(0deg);
+  }
+  100% {
+    transform: translate(100%, 90%) rotate(360deg) translate(400px) rotate(-360deg);
+  }
+}
+@keyframes orbitd {
+  0% {
+    transform: translate(70%, 90%) rotate(40deg) translate(500px) rotate(40deg);
+  }
+  100% {
+    transform: translate(70%, 90%) rotate(400deg) translate(505px) rotate(-400deg);
+  }
+}
+@keyframes orbite {
+  0% {
+    transform: translate(70%, 90%) rotate(-40deg) translate(500px) rotate(-40deg);
+  }
+  100% {
+    transform: translate(70%, 90%) rotate(320deg) translate(505px) rotate(-380deg);
+  }
+}
+@keyframes orbitf {
+  0% {
+    transform: translate(70%, 90%) rotate(180deg) translate(500px) rotate(180deg);
+  }
+  100% {
+    transform: translate(70%, 90%) rotate(537deg) translate(505px) rotate(-450deg);
+  }
+}
+
+
+/* start of line dev*/
+
+
+
+
+
+/* Define the structure line */
+/* Define the structure lines */
+
+
+/* end of line dev*/
+
+
+#trajectory {
+  position: absolute;
+  width: calc(90% - 100px);
+  height: calc(90% - 100px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/*#circle goes with the initial orbit and orbitpatha {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0, 255, 221);
+  border-radius: 50%;
+  right: 50%;
+  top: 10%;
+  animation: orbit 5s linear infinite;
+  z-index: -1;
+}
+@keyframes orbit {
+  0% {
+    transform: translate(30%, -45%) rotate(0deg) translate(120px) rotate(0deg);
+  }
+  100% {
+    transform: translate(30%, -45%) rotate(720deg) translate(120px) rotate(-720deg);
+  }
+}*/
+
+/*#orbit-patha {
+  position: absolute;
+  width: 240px; /* Adjust the width of the orbit path as needed 
+  height: 240px; /* Adjust the height of the orbit path as needed 
+  border: 1px dashed rgba(255, 255, 255, 0.5); /* Dashed red border 
+  border-radius: 50%;
+  right: 50%;
+  top: 10%;
+  transform: translate(50%, -50%);
+  pointer-events: none; /* Ensure the path doesn't interfere with mouse events 
+  z-index: -1; /* Position the orbit path behind the circle 
+}*/
+/*#orbit-pathb {
+  position: absolute;
+  width: 240px; /* Adjust the width of the orbit path as needed 
+  height: 240px; /* Adjust the height of the orbit path as needed 
+  border: 1px dashed rgba(105, 210, 184, 0.5); /* Dashed yellow border 
+  border-radius: 60%;
+  left: 21%;
+  top: 45%;
+  transform-origin: center;
+  transform: translate(50%, -50%);
+  pointer-events: none; /* Ensure the path doesn't interfere with mouse events 
+  z-index: -1; /* Position the orbit path behind the satellite 
+}
+goes  with the circle small satellite */
+
+@keyframes followOrbit {
+  0% {
+    width: 240px; /* Initial width of the orbit path */
+    height: 240px; /* Initial height of the orbit path */
+    left: 30%; /* Initial left position of the orbit path */
+    top: calc(50% - 60px); /* Initial top position of the orbit path */
+  }
+  100% {
+    width: 240px; /* Final width of the orbit path */
+    height: 240px; /* Final height of the orbit path */
+    left: 30%; /* Final left position of the orbit path */
+    top: calc(50% - 60px); /* Final top position of the orbit path */
+  }
+}
+/*
+#black-circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffa6a6;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  animation: followTrajectory 10s linear infinite; /* Apply follow trajectory animation 
+}
+
+
+
+@keyframes followTrajectory {
+  from {
+    transform: translate(-30%, -30%) rotate(0deg) translateX(calc(40vw - 10px)) rotate(0deg);
+  }
+  to {
+    transform: translate(-20%, -10%) rotate(360deg) translateX(calc(10vw - 70px))  rotate(-360deg);
+  }
+}
+
+*/
+
+
+body {
+    margin: 0;
+    background-color: #17182f;
+   display: grid;
+    place-content: center;
+    height: 170vh;
+  }
+  b, b:before, b:after {
+    filter: blur(50px);
+    position: absolute;
+    border-radius: 50%;
+  }
+  b {
+    width: 50vmin;
+    height: 50vmin;
+    right: 73vmin;
+    top:25vmin;
+    position: absolute;
+    box-shadow: 1vmin 0 3vmin 2vmin #ff5500,
+         inset -1vmin 0 3vmin 4vmin #f80,
+               -4vmin 0 35vmin 0 #f60;
+    animation: bh 5s linear infinite;
+  }
+  @keyframes bh {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(-360deg)}
+  }
+  b:before, b:after {
+    content: "";
+    background: rgb(110, 4, 4);
+    position: relative;
+    top: 6vmin;
+  }
+  b:before {
+    width: 3vmin;
+    height: 3vmin;
+    left: 40vmin;
+    position: absolute;
+    box-shadow: yellow 0 0 2vmin 2vmin,
+                yellow 2vmin 4vmin 2vmin 0.5vmin;
+  }
+  b:after {
+    width: 38vmin;
+    height: 38vmin;
+    opacity: 0.03;
+    left: -14vmin;
+    position: absolute;
+  }
+  canvas {
+    display: block;
+    /*vertical-align: bottom;*/
+  }
+  
+  
+  /* ---- particles.js container ---- */
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 260%;
+}
+  #particles-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    clip-path: circle(13% at center);
+}
+
+/*#chart-container {
+  position: absolute; /* or position: absolute; 
+  top: 105%;
+  width: 30%; /* or specify width as needed 
+  
+  background-color: #fff; /* specify background color if needed 
+}*/
+
+
+
+/* MAIN 
+main {
+  padding-top: 94%;
+  height: 100vmin;
+}
+
+.column {
+  float: left;
+  width: 100%;
+  
+  flex: 50%;
+}
+
+/* Clear floats after the columns 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  display: flex;
+}
+#row {
+  height: 90vmin;
+}
+#image-container{
+  height: 30%;
+}
+#rowa {
+  padding-top: 20vmin;
+}
+#about {
+  height: 50vmin;
+}
+#about h1 {
+  font-family: 'Roboto Mono', monospace; /* Use the same font as the rest of the webpage 
+  color: white; /* Set font color to white 
+  bottom: 10px; /* Adjust the margin to move the heading down 
+  text-align: center;
+}
+*/
