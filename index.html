@@ -160,3 +160,8 @@
             <!-- Add a new list item for the new page -->
         </ul>
     </nav>
+<div class="sidebar">
+      <button class="tooltip" id="a" data-tooltip="Show all dashed trajectories of satellites" onclick="toggleAnimationa()">Orbits</button>
+      <button class="tooltip" id="b" data-tooltip="5 libration Points that offer celestial 'parking spots' that delicates gravitational balance" onclick="toggleAnimationc()">Lagrange Points</button>
+      <button class="tooltip" id="c" data-tooltip="Satellites enter the center of a black hole is the ultimate no man's land" onclick="toggleAnimationb()">Singularity</button>
+      <input type="range" min="1" max="10" value="1" class="speed-control" id="speedControl" onchange="changeSpeed(this.value)">
