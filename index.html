@@ -670,4 +670,8 @@ if (button.classList.contains("pressed")) {
   margin-top: 29px; /* Add some space between the images and the slideshow 
   animation: scrollDown 60s linear infinite; /* Adjust duration as needed 
     overflow: hidden;
-}*/
+}
+@keyframes scrollDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(calc(-100% - 10px)); } /* Adjust based on slide height 
+}          */
