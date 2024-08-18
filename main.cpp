@@ -11,4 +11,5 @@ const double c = 299792458;     // speed of light
 // structure to represent a 3D point
 struct Point {
     double x, y, z;
+Point(double x_, double y_, double z_) : x(x_), y(y_), z(z_) {}
 };
