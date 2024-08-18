@@ -12,4 +12,8 @@ const double c = 299792458;     // speed of light
 struct Point {
     double x, y, z;
 Point(double x_, double y_, double z_) : x(x_), y(y_), z(z_) {}
+
+Point operator+(const Point& other) const {
+        return {x + other.x, y + other.y, z + other.z};
+    }
 };
