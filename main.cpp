@@ -20,5 +20,7 @@ Point operator+(const Point& other) const {
 Point operator-(const Point& other) const {
         return {x - other.x, y - other.y, z - other.z};
     }
-
+Point operator*(double scalar) const {
+        return {x * scalar, y * scalar, z * scalar};
+    }
 };
