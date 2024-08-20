@@ -23,4 +23,6 @@ Point operator-(const Point& other) const {
 Point operator*(double scalar) const {
         return {x * scalar, y * scalar, z * scalar};
     }
+Point operator/(double scalar) const {
+    }
 };
