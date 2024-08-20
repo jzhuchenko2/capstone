@@ -16,4 +16,9 @@ Point(double x_, double y_, double z_) : x(x_), y(y_), z(z_) {}
 Point operator+(const Point& other) const {
         return {x + other.x, y + other.y, z + other.z};
     }
+
+Point operator-(const Point& other) const {
+        return {x - other.x, y - other.y, z - other.z};
+    }
+
 };
