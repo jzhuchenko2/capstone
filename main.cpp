@@ -24,5 +24,11 @@ Point operator*(double scalar) const {
         return {x * scalar, y * scalar, z * scalar};
     }
 Point operator/(double scalar) const {
+    // making sure scalar is not zero to avoid division by zero
+        if (scalar != 0.0) {
+            return {x / scalar, y / scalar, z / scalar};
+        } else {
+            
+        }
     }
 };
