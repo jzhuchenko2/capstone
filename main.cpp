@@ -45,3 +45,8 @@ struct Spacecraft {
 
     Spacecraft(double x, double y, double z, double vx, double vy, double vz): position(x, y, z), velocity(vx, vy, vz) {}
 };
+
+
+Point gravitationalForce(const Point& position, double rotationSpeed) {
+    // Assume a Kerr black hole with mass M and rotation parameter a
+}
