@@ -28,7 +28,9 @@ Point operator/(double scalar) const {
         if (scalar != 0.0) {
             return {x / scalar, y / scalar, z / scalar};
         } else {
-            
+            // handle division by zero gracefully (we'll probably need to adjust as needed)
+            std::cerr << "Error: Division by zero.\n";
+            return *this;  // Return original value
         }
     }
 };
