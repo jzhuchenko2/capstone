@@ -34,3 +34,14 @@ Point operator/(double scalar) const {
         }
     }
 };
+
+// structure spacecraft
+struct Spacecraft {
+    Point position;
+    Point velocity;
+
+// sorry i took awhile, please don't be mad
+    
+
+    Spacecraft(double x, double y, double z, double vx, double vy, double vz): position(x, y, z), velocity(vx, vy, vz) {}
+};
