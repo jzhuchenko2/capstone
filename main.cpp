@@ -50,4 +50,5 @@ struct Spacecraft {
 Point gravitationalForce(const Point& position, double rotationSpeed) {
     // Assume a Kerr black hole with mass M and rotation parameter a
     const double M = 1e30;
+    const double a = 0.9;  
 }
