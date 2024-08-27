@@ -56,5 +56,5 @@ Point gravitationalForce(const Point& position, double rotationSpeed) {
     double r = std::sqrt(position.x * position.x + position.y * position.y + position.z * position.z);
 
         // calculate the gravitational force using the Kerr metric
-    
+    double forceMagnitude = -G * M * (1.0 - 2.0 * G * M / (r * c * c));
 }
