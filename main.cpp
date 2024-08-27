@@ -54,4 +54,7 @@ Point gravitationalForce(const Point& position, double rotationSpeed) {
 
     // calculate the Boyer-Lindquist radial coordinate
     double r = std::sqrt(position.x * position.x + position.y * position.y + position.z * position.z);
+
+        // calculate the gravitational force using the Kerr metric
+    
 }
