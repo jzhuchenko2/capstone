@@ -60,4 +60,5 @@ Point gravitationalForce(const Point& position, double rotationSpeed) {
 
     // include the effect of black hole rotation
     double r_perp = std::sqrt(position.x * position.x + position.y + position.y);
+    double phi_bh = std::atan2(position.y, position.x) + rotationSpeed * r_perp;
 }
