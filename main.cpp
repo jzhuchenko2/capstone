@@ -57,4 +57,7 @@ Point gravitationalForce(const Point& position, double rotationSpeed) {
 
         // calculate the gravitational force using the Kerr metric
     double forceMagnitude = -G * M * (1.0 - 2.0 * G * M / (r * c * c)) / (r * r);
+
+    // include the effect of black hole rotation
+    double r_perp = std::sqrt(position.x * position.x + position.y + position.y);
 }
