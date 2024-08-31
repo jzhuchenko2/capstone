@@ -63,4 +63,6 @@ Point gravitationalForce(const Point& position, double rotationSpeed) {
     double phi_bh = std::atan2(position.y, position.x) + rotationSpeed * r_perp / (r * c);
 
      Point forceVector(forceMagnitude * std::cos(phi_bh), forceMagnitude * std::sin(phi_bh), 0.0);
+
+    return forceVector;
 }
