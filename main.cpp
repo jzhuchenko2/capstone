@@ -67,7 +67,7 @@ Point gravitationalForce(const Point& position, double rotationSpeed) {
     return forceVector;
 }
 
-
+// function to perform numerical integration using runge-kutta method
 void integrate(Spacecraft& spacecraft, double rotationSpeed, double dt) {
    
 }
