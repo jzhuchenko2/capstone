@@ -72,4 +72,5 @@ void integrate(Spacecraft& spacecraft, double rotationSpeed, double dt) {
    
     const double k1 = dt;
     const double k2 = dt / 2.0;
+    const double k3 = dt / 2.0;
 }
