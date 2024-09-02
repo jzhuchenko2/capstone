@@ -66,3 +66,8 @@ Point gravitationalForce(const Point& position, double rotationSpeed) {
 
     return forceVector;
 }
+
+
+void integrate(Spacecraft& spacecraft, double rotationSpeed, double dt) {
+   
+}
