@@ -77,4 +77,5 @@ void integrate(Spacecraft& spacecraft, double rotationSpeed, double dt) {
 
     Point force1 = gravitationalForce(spacecraft.position, rotationSpeed);
     Point force2 = gravitationalForce(spacecraft.position + spacecraft.velocity * (k2 / 2.0), rotationSpeed);
+    Point force3 = gravitationalForce(spacecraft.position + spacecraft.velocity * (k3 / 2.0), rotationSpeed);
 }
