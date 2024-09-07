@@ -84,7 +84,7 @@ Point force4 = gravitationalForce(spacecraft.position + spacecraft.velocity * k4
 
     
 
-
+// wayne to its AD
 
 
 
