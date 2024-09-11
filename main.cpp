@@ -91,3 +91,7 @@ spacecraft.velocity = spacecraft.velocity + (force1* k1 + force2 * (2.0 * k2) + 
     //spacecraft.position.y += spacecraft.velocity.y * dt;
     //spacecraft.position.z += spacecraft.velocity.z * dt;
 }
+// function to apply a simple form of the newman-janis algorithm for rotating black hole
+Point newmanJanis(const Point& position, double rotationSpeed) {
+    
+}
