@@ -86,4 +86,6 @@ void integrate(Spacecraft& spacecraft, double rotationSpeed, double dt) {
 // update velocity and position using Runge-Kutta method
 spacecraft.velocity = spacecraft.velocity + (force1* k1 + force2 * (2.0 * k2) + force3 * (2.0 * k3) + force4 * k4) / 6.0;
 
+    spacecraft.position = spacecraft.position + (spacecraft.velocity * dt);
+
 }
