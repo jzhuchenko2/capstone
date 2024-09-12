@@ -95,4 +95,5 @@ spacecraft.velocity = spacecraft.velocity + (force1* k1 + force2 * (2.0 * k2) + 
 Point newmanJanis(const Point& position, double rotationSpeed) {
     // apply a simplified form of the Newman-Janis algorithm
     double r_perp = std::sqrt(position.x * position.x + position.y * position.y);
+    double phi_bh = std::atan2(position.y, position.x) + rotationSpeed * r_perp / (position.z * c);
 }
