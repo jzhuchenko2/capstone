@@ -103,3 +103,37 @@ Point newmanJanis(const Point& position, double rotationSpeed) {
 
     return {x_rotated, y_rotated, position.z};
 }
+
+
+/*
+int main() {
+
+    std::ofstream outfile("output.dat");
+
+
+
+
+    // initial conditions for the spacecraft
+    Spacecraft spacecraft(1e6, 0, 1e4, 0, 2e4, 0); // placed at (x=1e6, y=0, z=1e4) with initial velocity in y-direction
+
+    // simulation parameters
+    const double simulationTime = 1000.0;   // in seconds
+    const double dt = 1.0;                   // time step in seconds
+    const double rotationSpeed = 1.0e-6;    // Rotation speed of the black hole in rad/s (example value)
+
+    // perform the simulation
+    for (double t = 0; t <= simulationTime; t += dt) {
+        integrate(spacecraft, rotationSpeed, dt);
+
+        // apply a simplified form of the Newman-Janis algorithm
+        spacecraft.position = newmanJanis(spacecraft.position, rotationSpeed);
+
+        // print the position of the spacecraft at regular intervals
+        if (std::fmod(t, 10.0) < dt) {
+            std::cout << "Time: " << t << "s, Position: (" << spacecraft.position.x
+                      << ", " << spacecraft.position.y << ", " << spacecraft.position.z << ")\n";
+        }
+    }
+
+    return 0;
+}*/
