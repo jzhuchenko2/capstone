@@ -99,4 +99,5 @@ Point newmanJanis(const Point& position, double rotationSpeed) {
 
     // rotate the position
     double x_rotated = position.x * std::cos(phi_bh) - position.y * std::sin(phi_bh);
+    double y_rotated = position.x * std::sin(phi_bh) + position.y * std::cos(phi_bh);
 }
