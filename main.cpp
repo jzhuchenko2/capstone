@@ -96,4 +96,7 @@ Point newmanJanis(const Point& position, double rotationSpeed) {
     // apply a simplified form of the Newman-Janis algorithm
     double r_perp = std::sqrt(position.x * position.x + position.y * position.y);
     double phi_bh = std::atan2(position.y, position.x) + rotationSpeed * r_perp / (position.z * c);
+
+    // rotate the position
+    double x_rotated = position.x * std::cos(phi_bh) - position.y * std::sin(phi_bh);
 }
