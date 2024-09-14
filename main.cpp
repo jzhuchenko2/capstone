@@ -137,3 +137,7 @@ int main() {
 
     return 0;
 }*/
+int main() {
+    //ile for writing position data
+    std::ofstream outfile("output.dat");
+}
