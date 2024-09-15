@@ -140,4 +140,6 @@ int main() {
 int main() {
     //ile for writing position data
     std::ofstream outfile("output.dat");
+    // Simulation parameters
+    const double simulationTime = 1000.0;   // in seconds
 }
