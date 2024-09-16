@@ -145,5 +145,5 @@ int main() {
     const double dt = 1.0;                   // time step in seconds
     const double rotationSpeed = 1.0e-6;   
 
-    Spacecraft spacecraft(1e6, 0, 1e4, 0, 2e4, 0);
+    Spacecraft spacecraft(1e6, 0, 1e4, 0, 2e4, 0); // Placed at (x=1e6, y=0, z=1e4) with initial velocity in y-direction
 }
