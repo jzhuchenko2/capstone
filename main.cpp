@@ -150,6 +150,6 @@ int main() {
     // performing the simulation
     for (double t = 0; t <= simulationTime; t += dt) {
         integrate(spacecraft, rotationSpeed, dt);
-        
+        spacecraft.position = newmanJanis(spacecraft.position, rotationSpeed);
     }
 }
