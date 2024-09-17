@@ -149,6 +149,7 @@ int main() {
     // change spacecraft from 1e9 first to 1e6, 1e6->1e4, 2e4->2e6
     // performing the simulation
     for (double t = 0; t <= simulationTime; t += dt) {
+        integrate(spacecraft, rotationSpeed, dt);
         
     }
 }
