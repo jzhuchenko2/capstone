@@ -156,4 +156,6 @@ int main() {
     }
     // Close the file
     outfile.close();
+
+    return 0;
 }
