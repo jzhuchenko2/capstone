@@ -159,3 +159,45 @@ int main() {
 
     return 0;
 }
+/*
+//this didn't work, but wait and work with me!
+int main() {
+    // Open a file for writing position data
+    std::ofstream outfile("output.dat");
+
+    // Simulation parameters
+    const double simulationTime = 1000.0;   // in seconds
+    const double dt = 1.0;                   // time step in seconds
+    const double rotationSpeed = 1.0e-6;    // Rotation speed of the black hole in rad/s (example value)
+
+    // Constants
+    const double M = 1e30;  // Mass of the black hole
+    const double a = 0.9;   // Rotation parameter of the black hole
+
+    // Calculate the desired radius of the circular orbit (for example, using Kepler's third law)
+    // For simplicity, we'll assume a circular orbit at a specific radius
+    const double orbitRadius = 1e7;  // Example radius in meters
+
+    // Calculate the required velocity for circular motion at the desired radius
+    // We'll use the formula for circular orbital velocity: v = sqrt(G * M / r)
+    const double requiredVelocity = std::sqrt(G * M / orbitRadius);
+
+    // Set the spacecraft's initial position to the desired radius from the black hole
+    // We'll place the spacecraft in the x-y plane with zero z-component
+    Spacecraft spacecraft(orbitRadius, 0, 0, 0, requiredVelocity, 0);
+
+    // Perform the simulation
+    for (double t = 0; t <= simulationTime; t += dt) {
+        integrate(spacecraft, rotationSpeed, dt);
+        spacecraft.position = newmanJanis(spacecraft.position, rotationSpeed);
+
+        // Write position data to file
+        outfile << t << " " << spacecraft.position.x << " " << spacecraft.position.y << " " << spacecraft.position.z << "\n";
+    }
+
+    // Close the file
+    outfile.close();
+
+    return 0;
+}
+*/
