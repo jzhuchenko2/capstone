@@ -9,3 +9,5 @@ M1 = 10
 M2 = 5 
 R_s1 = (2 * G * M1 * 1.98847e30) / c**2
 R_s2 = (2 * G * M2 * 1.98847e30) / c**2 #Schwarzschild rad of 2nd BH
+
+L4_x = R_s2 * np.cos(np.pi/3)
