@@ -15,4 +15,6 @@ L4_x = R_s2 * np.cos(np.pi/3)
 L4_z = 0
 
 num_frames = 100
-theta_vals = np.linspace(0, 4 * np.pi, num_frames)
+theta_vals = np.linspace(0, 4 * np.pi, num_frames) # thetaaa values for the animation
+
+fig = plt.figure(figsize=(10, 8)) #first plot
