@@ -18,3 +18,4 @@ num_frames = 100
 theta_vals = np.linspace(0, 4 * np.pi, num_frames) # thetaaa values for the animation
 
 fig = plt.figure(figsize=(10, 8)) #first plot
+ax = fig.add_subplot(111, projection='3d')
