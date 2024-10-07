@@ -23,4 +23,4 @@ ax = fig.add_subplot(111, projection='3d')
 black_hole1, = ax.plot([0], [0], [0], marker='o', color='black', markersize=10) #messin with the plots
 black_hole2, = ax.plot([L4_x], [L4_y], [L4_z], marker='o', color='blue', markersize=10)
 
-satellite_line, = ax.plot([], [], [], color='red', linewidth=1)
+satellite_line, = ax.plot([], [], [], color='red', linewidth=1) #line width change for bH animation
