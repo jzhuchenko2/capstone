@@ -21,3 +21,4 @@ fig = plt.figure(figsize=(10, 8)) #first plot
 ax = fig.add_subplot(111, projection='3d')
 
 black_hole1, = ax.plot([0], [0], [0], marker='o', color='black', markersize=10) #messin with the plots
+black_hole2, = ax.plot([L4_x], [L4_y], [L4_z], marker='o', color='blue', markersize=10)
