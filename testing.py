@@ -24,3 +24,5 @@ black_hole1, = ax.plot([0], [0], [0], marker='o', color='black', markersize=10) 
 black_hole2, = ax.plot([L4_x], [L4_y], [L4_z], marker='o', color='blue', markersize=10)
 
 satellite_line, = ax.plot([], [], [], color='red', linewidth=2) #line width change for bH animation
+
+satellite, = ax.plot([], [], [], marker='o', color='green', markersize=5)
