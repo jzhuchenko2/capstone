@@ -26,3 +26,6 @@ black_hole2, = ax.plot([L4_x], [L4_y], [L4_z], marker='o', color='blue', markers
 satellite_line, = ax.plot([], [], [], color='red', linewidth=2) #line width change for bH animation
 
 satellite, = ax.plot([], [], [], marker='o', color='green', markersize=5)
+
+def update(frame):
+  theta1 = theta_vals[frame]
