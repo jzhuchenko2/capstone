@@ -31,3 +31,4 @@ def update(frame):
   theta1 = theta_vals[frame]
   theta2 = theta_vals[frame] #always two thetas and adjust if needed for different motion
   black_hole1_x = L4_x + R_s1 * np.cos(theta2)
+  black_hole1_y = L4_y + R_s1 * np.sin(theta2)
