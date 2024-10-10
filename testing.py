@@ -29,3 +29,4 @@ satellite, = ax.plot([], [], [], marker='o', color='green', markersize=5)
 
 def update(frame):
   theta1 = theta_vals[frame]
+  theta2 = theta_vals[frame] #always two thetas
