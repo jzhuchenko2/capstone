@@ -36,3 +36,6 @@ def update(frame):
 
   satellite_new_x = black_hole1_x + 2 * R_s1 * np.cos(2 * theta1)
   satellite_new_y = black_hole1_y + 2 * R_s1 * np.sin(2 * theta1)
+  satellite_new_z = black_hole1_z
+
+  
