@@ -38,4 +38,6 @@ def update(frame):
   satellite_new_y = black_hole1_y + 2 * R_s1 * np.sin(2 * theta1)
   satellite_new_z = black_hole1_z
 
+    # Update satellite line data
+    satellite_line.set_data([black_hole1_x, satellite_new_x], [black_hole1_y, satellite_new_y])
   
