@@ -41,3 +41,5 @@ def update(frame):
     # Update satellite line data
     satellite_line.set_data([black_hole1_x, satellite_new_x], [black_hole1_y, satellite_new_y])
     satellite_line.set_3d_properties([black_hole1_z, satellite_new_z])
+
+    satellite.set_data(satellite_new_x, satellite_new_y)
