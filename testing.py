@@ -46,3 +46,4 @@ def update(frame):
     satellite.set_3d_properties(satellite_new_z)
 
 black_hole1.set_data([black_hole1_x], [black_hole1_y])
+black_hole1.set_3d_properties([black_hole1_z])
